@@ -44,7 +44,7 @@ const yunas = playerMaker("yuna");
 yunas.age = 12;
 
 const numbers: readonly number[] = [1, 2, 3, 4];
-numbers.push(1); // 'push' does not exist on type 'readonly
+// numbers.push(1); // 'push' does not exist on type 'readonly
 
 /* 
     Tuple : array를 생성할 수 있게 한다.
