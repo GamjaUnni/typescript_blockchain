@@ -55,5 +55,5 @@ const people: readonly [string, number, boolean] = ["nico", 12, false];
 
 /* 
     any : 타입스트립트로부터 빠져나오고 싶을 때 쓰는 타입
-    좋지 않지만 가끔 써야 할때가 있음.
+    좋지 않지만 가끔 써야 할때가 있음
 */
