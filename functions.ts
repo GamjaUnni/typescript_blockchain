@@ -50,3 +50,29 @@ const add3: Add3 = (a, b, c?: number) => {
 };
 console.log(add3(1, 2));
 console.log(add3(1, 2, 3));
+
+/* Polymorphism - 다형성 */
+type SuperPrint = {
+    <TypePlaceholder>(arr: TypePlaceholder[]): TypePlaceholder; // generic
+    // (arr: number[]): void;
+    // (arr: boolean[]): void;
+    // (arr: string[]): void;
+    // (arr: (number | boolean)[]): void; // 모든 가능성을 다 조합해서 만들어야 하기 때문에 별로 좋지 않은 방법
+};
+const superPrint: SuperPrint = (arr) => arr[0];
+
+superPrint([1, 2, 3, 4]);
+superPrint([true, false, true]);
+superPrint(["a", "b", "c"]);
+superPrint([1, 2, true, false]);
+
+/* Generics Recap */
+type SuperPrint2 = { <T, M>(a: T[], b: M): T };
+const superPrint2: SuperPrint2 = (arr) => arr[0];
+
+superPrint2([1, 2, 3, 4], "x");
+superPrint2([true, false, true], 1);
+superPrint2(["a", "b", "c"], false);
+superPrint2([1, 2, true, false], []);
+
+/* Conclusions */
