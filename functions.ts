@@ -76,3 +76,16 @@ superPrint2(["a", "b", "c"], false);
 superPrint2([1, 2, true, false], []);
 
 /* Conclusions */
+function superPrint3<V>(a: V[]) {
+    return a[0];
+}
+
+superPrint3([1, 2, 3, 4]);
+superPrint3([true, false, true]);
+superPrint3(["a", "b", "c"]);
+superPrint3([1, 2, true, false]);
+
+//////////////////////////////////
+
+type A = Array<number>;
+let aaa: A = [1, 2, 3, 4];
